@@ -16,10 +16,8 @@ services:
       - ./pagila-data-yum-jsonb.backup:/docker-entrypoint-initdb.d/pagila-data-yum-jsonb.backup
       - ./pagila-data-apt-jsonb.backup:/docker-entrypoint-initdb.d/pagila-data-apt-jsonb.backup
       - pgdata:/var/lib/postgresql/data
-    expose:
-      - 5432
     ports:
-      - 5432:5432
+      - 5433:5432
   pgadmin:
     container_name: pgadmin4
     image: dpage/pgadmin4
